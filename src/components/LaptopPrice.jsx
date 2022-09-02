@@ -17,8 +17,13 @@ const LaptopPrice = () => {
             )} type="date" />
         </div>
         <div className='flex price'>
-            {errors.laptop_price ? <LaptopError message={errors.laptop_price.message} /> : 
+
+        <div className='select-error'>
+                {errors.laptop_price ? <LaptopError message={errors.laptop_price.message} /> : 
             <label htmlFor="">ლეპტოპის ფასი</label>}
+                </div>
+
+          
             <div>
                 <input
                 className={`${errors.laptop_price && "input-error"}`}

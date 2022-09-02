@@ -18,7 +18,10 @@ const FormOne = () => {
     handleNextPage();
 };
 
-console.log(errors);
+
+const ss = (e) =>{
+    console.log(e);
+}
 
 
     return (
@@ -55,7 +58,8 @@ console.log(errors);
                     <p htmlFor="">მინიმუმ 2 სიმბოლო, ქართული ასოები</p>}
                 </div>
             </div>
-
+                
+          
             <select 
             value={formData.team_id}
             className={`${errors.team_id && "input-error"}`}

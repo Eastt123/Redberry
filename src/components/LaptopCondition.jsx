@@ -13,7 +13,10 @@ const LaptopCondition = () => {
         className={` laptop-condition ${errors.laptop_state && "radio-error"}`}
         
         onChange={(e)=>handleOnChange(e)} >
-        {errors.laptop_state && <LaptopError message={errors.laptop_state.message} /> }
+             <div className='select-error'>
+             {errors.laptop_state && <LaptopError message={errors.laptop_state.message} /> }
+                </div>
+        
                 <label >ლეპტოპის მდგომარეობა</label>
                 <div className='flex'>
                     <div className='flex'>

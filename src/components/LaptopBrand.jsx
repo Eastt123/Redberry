@@ -6,8 +6,12 @@ const LaptopBrand = () => {
     return (
         <div className='laptop-brand'>
                 <div className='laptop-name'>
-                      {errors.laptop_name ? <LaptopError message={errors.laptop_name.message} /> : 
+
+                <div className='select-error'>
+                {errors.laptop_name ? <LaptopError message={errors.laptop_name.message} /> : 
                     <label htmlFor="">ლეპტოპის სახელი</label> }
+                </div>
+                      
                     <input className={`${errors.laptop_name ? "input-error" : ""}`} 
                      {...register("laptop_name", {
                         required: "ლეპტოპის სახელი სავალდებულოა",

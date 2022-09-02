@@ -6,8 +6,11 @@ const LaptopRam = () => {
     return (
         <div className='grid laptop-ram'>
                 <div className='laptop-name'>
-            {errors.laptop_ram ? <LaptopError message={errors.laptop_ram.message} /> :
+                <div className='select-error'>
+                {errors.laptop_ram ? <LaptopError message={errors.laptop_ram.message} /> :
                     <label htmlFor="">ლეპტოპის RAM (GB)</label>}
+                </div>
+            
                     <input
                     className={`${errors.laptop_ram && "input-error"}`}
                         {...register("laptop_ram", {
@@ -18,8 +21,11 @@ const LaptopRam = () => {
                         type="text" />
                 </div>
                 <div className={`${errors.laptop_hard_drive_type && "radio-error"}`} >
-                {errors.laptop_hard_drive_type ? <LaptopError message={errors.laptop_hard_drive_type.message} />:
+             
+                    <div className='select-error'>
+                    {errors.laptop_hard_drive_type ? <LaptopError message={errors.laptop_hard_drive_type.message} />:
                     <label htmlFor="">მეხსიერების ტიპი</label>}
+                </div>
                     <div  onChange={(e)=>handleOnChange(e)} className='flex'>
                         <div className='flex'>
                             <input
