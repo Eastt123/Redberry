@@ -431,7 +431,8 @@ border-radius: 20px;
     justify-content: center;
 }
 .list-item img{
-    max-width: 266px;
+    max-width: 200px;
+    height: 160px
 }
 .list-item div:nth-child(2){
     justify-content: space-evenly;
