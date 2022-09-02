@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import imageError from "../assets/imageError.png";
 import { useContext } from 'react';
 import { appContextProvider } from '../context/Context';
 const ImageUpload = () => {
     const {errors, formData, register, handleOnChange} = useContext(appContextProvider())
-    console.log(formData);
     return (
         <div>
         <div className={`image-container ${ errors.laptop_image ? "image-error": ""}`}>

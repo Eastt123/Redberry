@@ -41,6 +41,7 @@ const Context = ({children}) => {
     const handleOnChange = (e) =>{
         const name = e.target.name;
         let value = e.target.value;
+        console.log(name, value);
         switch (name) {
             case "position_id":
             case "team_id":
@@ -50,10 +51,13 @@ const Context = ({children}) => {
             case "laptop_ram":  
             if(parseInt(value)){
             value = parseInt(value);
-
         }
             break
             case "laptop_image":
+                if(e.target.files.length === 0 ){
+                    value = ""
+                    break;
+                }
                 value =  e.target.files[0];
                 break
             default:
