@@ -518,7 +518,8 @@ margin: 1rem 0;
 
 .laptop-form select{
     position: relative;
-    bottom: 6px
+    bottom: 6px;
+    font-weight: bold;
 }
 
 .select-container{
