@@ -241,6 +241,7 @@ text-align: center;
 
 .image-container label, .upload label{
 padding: 18px 60px;
+text-align: center;
 background: #62A1EB;
 border-radius: 8px;
 border: none;
